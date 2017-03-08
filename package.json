@@ -1,0 +1,32 @@
+{
+  "name": "@tradle/bot-version-hawk",
+  "version": "1.0.0",
+  "description": "request next version of an object when detected",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tradle/bot-version-hawk"
+  },
+  "author": "mvayngrib",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "debug": "^2.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "husky": "^0.13.2",
+    "tape": "^4.6.3"
+  },
+  "keywords": [
+    "bot",
+    "tradle",
+    "version"
+  ],
+  "scripts": {
+    "test": "node test",
+    "lint": "eslint --quiet .",
+    "start": "bots --conf ./conf.json",
+    "prepush": "npm run test"
+  }
+}
