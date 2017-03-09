@@ -44,6 +44,10 @@ test('basic', co(function* (t) {
   yield waitToReceive()
 
   const expectedState = {
+    [permalink]: {
+      permalink,
+      userId
+    },
     [link1]: {
       permalink,
       userId
