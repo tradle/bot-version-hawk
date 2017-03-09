@@ -73,14 +73,14 @@ test('basic', co(function* (t) {
   })
 
   yield awaitSealEvent('newversion')
-  t.equal(sent.object[TYPE], 'tradle.LatestVersionRequest')
-  t.same(sent.object.item, {
-    id: buildId({
-      type: BANKRUPTCY_STATUS,
-      link: link1,
-      permalink
-    })
-  })
+  t.equal(sent.object[TYPE], 'tradle.FormRequest')
+  // t.same(sent.object.item, {
+  //   id: buildId({
+  //     type: BANKRUPTCY_STATUS,
+  //     link: link1,
+  //     permalink
+  //   })
+  // })
 
   t.end()
 
