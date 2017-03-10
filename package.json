@@ -28,6 +28,8 @@
     "test": "node test",
     "lint": "eslint --quiet .",
     "start": "DEBUG=tradle:bot* bots --conf ./conf.json",
+    "debug": "DEBUG=tradle:bot* node --debug --inspect $(which bots) --conf ./conf.json",
+    "debug-brk": "DEBUG=tradle:bot* node --debug-brk --inspect $(which bots) --conf ./conf.json",
     "prepush": "npm run test"
   }
 }
