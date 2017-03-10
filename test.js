@@ -46,11 +46,13 @@ test('basic', co(function* (t) {
   const expectedState = {
     [permalink]: {
       permalink,
-      userId
+      userId,
+      type: BANKRUPTCY_STATUS
     },
     [link1]: {
       permalink,
-      userId
+      userId,
+      type: BANKRUPTCY_STATUS
     }
   }
 
