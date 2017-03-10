@@ -26,7 +26,7 @@ module.exports = function persistedMap (bot) {
     return bot.shared.set(STORAGE_KEY, map)
   }
 
-  const update = co(function* ({ link, update }) {
+  const updateMap = co(function* ({ link, update }) {
     if (!map) map = yield init
     if (!map[link]) map[link] = {}
 
@@ -48,7 +48,7 @@ module.exports = function persistedMap (bot) {
   return {
     get: key => queue.push(() => get(key)),
     set: val => queue.push(() => set(val)),
-    update: data => queue.push(() => update(data)),
+    update: data => queue.push(() => updateMap(data)),
     commit
   }
 }
